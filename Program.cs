@@ -4,28 +4,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp5
+namespace OOPs
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int variable1;
-            int variable2;
-            int exchange;
+            Product product1 = new Product();
+            product1.productID = 100000521;
+            product1.price = 100000;
+            product1.model ="11";
+            product1.brand = "Apple";
+            product1.description = "Available in 3 colours";
+            product1.Display();
 
-            Console.Write("Enter the 1st variable : ");
-            variable1 = Convert.ToInt32(Console.ReadLine());
+            Product product2 = new Product(11273,"Samsung","S20",100000,"Available in 5 different colours!") ;
+            product2.Display();
 
-            Console.Write("Enter the 2nd variable : ");
-            variable2 = Convert.ToInt32(Console.ReadLine());
+            Product product3 = new Product(123588,"Google", "Pixel 4", 60000);
+            product3.Display();
 
-            exchange = variable1;
-            variable1 = variable2;
-            variable2 = exchange;
 
-            Console.WriteLine("The 1st variable : "+variable1);
-            Console.WriteLine("The 2nd variable : "+variable2);
         }
     }
 }
